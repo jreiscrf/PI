@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputWrapper = styled.input`
+const InputWrapper = styled.input`
   width: 100%;
   height: 50px;
   border: 1px solid #ccc;
@@ -13,3 +13,5 @@ export const InputWrapper = styled.input`
     border: 1px solid #000;
   }
 `;
+
+export { InputWrapper };

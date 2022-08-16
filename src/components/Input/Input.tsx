@@ -1,4 +1,5 @@
 import React from "react";
+import { InputWrapper } from "./styles";
 
 interface InputProps {
   type: string;
@@ -9,7 +10,7 @@ interface InputProps {
 
 export const Input = ({ type, placeholder, value, onChange }: InputProps) => {
   return (
-    <input
+    <InputWrapper
       type={type}
       placeholder={placeholder}
       value={value}
