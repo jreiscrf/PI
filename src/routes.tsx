@@ -6,6 +6,7 @@ import SignIn from "./pages/SignIn/signin";
 import Parceiros from "./pages/Parceiros/parceiros";
 import Header from "./components/Header/header";
 import Depoimentos from "./pages/Depoimentos/depoimentos";
+import Adotar from "./pages/Adotar/adotar";
 
 export default function RoutesApp() {
   return (
@@ -17,6 +18,7 @@ export default function RoutesApp() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/parceiros" element={<Parceiros />} />
         <Route path="/depoimentos" element={<Depoimentos />} />
+        <Route path="/adotar" element={<Adotar />} />
       </Routes>
     </BrowserRouter>
   );
