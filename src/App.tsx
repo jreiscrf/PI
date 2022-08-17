@@ -1,9 +1,8 @@
 import React from "react";
-import Input from "./components/Input/Input";
-import SignIn from "./pages/SignIn/signin";
+import RoutesApp from "./routes";
 
 function App() {
-  return <SignIn />;
+  return <RoutesApp />;
 }
 
 export default App;

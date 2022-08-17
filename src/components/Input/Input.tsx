@@ -1,21 +1,31 @@
 import React from "react";
-import { InputWrapper } from "./styles";
+import { InputWrapper, Label } from "./styles";
 
 interface InputProps {
-  type: string;
-  placeholder: string;
-  value: string;
+  type?: string;
+  placeholder?: string;
+  value?: string;
+  label?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = ({ type, placeholder, value, onChange }: InputProps) => {
+export const Input = ({
+  type,
+  placeholder,
+  value,
+  onChange,
+  label,
+}: InputProps) => {
   return (
-    <InputWrapper
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    />
+    <Label>
+      {label}
+      <InputWrapper
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+    </Label>
   );
 };
 

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const InputWrapper = styled.input`
-  width: 100%;
-  height: 50px;
+  width: 80%;
+  height: 35px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1px;
   padding: 0 10px;
+  margin: 8px 0;
   font-size: 16px;
   color: #333;
   outline: none;
@@ -14,4 +15,10 @@ const InputWrapper = styled.input`
   }
 `;
 
-export { InputWrapper };
+const Label = styled.label`
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 2px;
+`;
+
+export { InputWrapper, Label };
