@@ -7,6 +7,7 @@ import Parceiros from "./pages/Parceiros/parceiros";
 import Header from "./components/Header/header";
 import Depoimentos from "./pages/Depoimentos/depoimentos";
 import Adotar from "./pages/Adotar/adotar";
+import Footer from "./components/Footer/footer";
 
 export default function RoutesApp() {
   return (
@@ -20,6 +21,7 @@ export default function RoutesApp() {
         <Route path="/depoimentos" element={<Depoimentos />} />
         <Route path="/adotar" element={<Adotar />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
