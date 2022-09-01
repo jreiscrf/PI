@@ -130,7 +130,7 @@ main {
 	@include fontSize(50px);
 }
 
-.servicos-apresentacao {
+.depoimento-apresentacao {
 	background: linear-gradient($light-grey, $dark-grey);
 	margin-top: 40px;
 	padding-top: 10px;
@@ -152,14 +152,14 @@ main {
 	box-shadow: 10px 10px 10px $lead;
 }
 
-#texto-ap-servicos {
+#texto-ap-depoimento {
 	text-align: center;
 	margin-left: 33px;
 	margin-right: 33px;
 	@include fontSize(20px);
 }
 
-.principal-servicos {
+.principal-depoimento {
 	background: linear-gradient($light-grey, $dark-grey);
 	@include for-tablet-only {
         width: 90%;
@@ -172,7 +172,7 @@ ul {
 	display: inline-block;
 }
 
-.servicos li {
+.depoimento li {
 	display: inline-block;
 	vertical-align: top;
 	width: 20%;
@@ -192,16 +192,16 @@ ul {
     }
 }
 
-.servicos li:hover {
+.depoimento li:hover {
 	transform: scale(1.1);
 	border-color: $mustard;
 }
 
-.servicos li:hover h2 {
+.depoimento li:hover h2 {
 	@include fontSize(32px);
 }
 
-.servicos li:active {
+.depoimento li:active {
 	border-color: $green;
 }
 
@@ -212,7 +212,7 @@ h3{
 	@include fontSize(22px);
 }
 
-.texto-servicos {
+.texto-depoimento {
 	@include third_font-style;
 	text-align: center;
 	margin-top: 50px;
@@ -221,7 +221,7 @@ h3{
 	@include fontSize(28px);
 }
 
-.fotos-servicos {
+.fotos-depoimento {
 	width: 286px;
 	height: 400px;
 	@extend %triple-margin-top;
@@ -232,7 +232,7 @@ h3{
 	transition: 3s all;
 }
 
-.fotos-servicos:hover {
+.fotos-depoimento:hover {
 	transform: scale(1.1);
 	filter: grayscale(0%);
 }
