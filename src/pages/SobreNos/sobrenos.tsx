@@ -1,10 +1,17 @@
 import React from "react";
 
+import Contato from "./contato";
+import Historia from "./historia";
+import {
+  Container
+} from "./styles";
+
 const SobreNos = () => {
   return (
-    <div>
-      <h1>Sobre nós</h1>
-    </div>
+    <Container>
+      <Historia />
+      <Contato />
+    </Container>
   );
 };
 
