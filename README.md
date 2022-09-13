@@ -46,3 +46,12 @@ Aguarde e o assim que finalizar o projeto irá aparecer no seu navegador.
 - Realizar seu cadastro em nosso site ou fazer login
 - Após realizar seu login o usuário é redirecionado para o Home e a página Cadastre-se desaparece
 - Quando o usuário está logado também passa a ter acesso a página Depoimentos
+
+# Integrantes do grupo 19
+- Bruna Mozena Prado Pinto
+- Peterson Boone Antonio
+- Rogerio Lopes de Almeida
+- Silvio Luis da Silva Corsato
+- Leticia Roque Lima Oliveira
+- Roberto Satoru Mitsuyasu
+- Jonathan Torres dos Reis
