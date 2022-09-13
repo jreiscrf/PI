@@ -8,6 +8,13 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import {
+  setUser,
+  setAuthenticated,
+  setEmail,
+  setPassword,
+} from "../../stores/auth";
+import { useSelector, useDispatch } from "react-redux";
+import {
   BackgroundImage,
   Login,
   Register,
@@ -22,20 +29,19 @@ import {
 const SignIn = () => {
   const auth = getAuth();
   const navigate = useNavigate();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { email, password } = useSelector((state) => state.auth);
   const [name, setName] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newEmail, setNewEmail] = useState("");
-  const [authentication, setAuthentication] = useState(false);
 
   const addUser = () => {
     console.log(newEmail, newPassword);
     createUserWithEmailAndPassword(auth, newEmail, newPassword)
       .then((value) => {
         toast.success("Congratulations!! Account created successfully");
-        setAuthentication(true);
+        dispatch(setUser(value.user.providerData));
+        dispatch(setAuthenticated(true));
       })
       .catch((error) => toast.warn("Error creating account"));
   };
@@ -44,7 +50,8 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((value) => {
         toast.success("Welcome to the system");
-        navigate("/", { replace: true });
+        navigate("/home", { replace: true });
+        dispatch(setAuthenticated(true));
       })
       .catch((error) => toast.warn("Error signing in"));
   };
@@ -58,12 +65,13 @@ const SignIn = () => {
             <Input
               placeholder="E-mail"
               label="E-mail"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => dispatch(setEmail(e.target.value))}
             />
             <Input
               placeholder="Senha"
               label="Senha"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => dispatch(setPassword(e.target.value))}
+              type="password"
             />
             <ButtonArea>
               <ButtonSignIn onClick={_login}>LOGIN</ButtonSignIn>

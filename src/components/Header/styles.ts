@@ -18,7 +18,9 @@ const AreaLogo = styled.div`
 `;
 
 const Nav = styled.nav`
-  width: 50%;
+  align-items: center;
+  display: flex;
+  width: 30%;
   display: flex;
   padding: 20px;
   justify-content: space-evenly;
