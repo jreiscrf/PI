@@ -42,6 +42,7 @@ const SignIn = () => {
         toast.success("Congratulations!! Account created successfully");
         dispatch(setUser(value.user.providerData));
         dispatch(setAuthenticated(true));
+        navigate("/home", { replace: true });
       })
       .catch((error) => toast.warn("Error creating account"));
   };
